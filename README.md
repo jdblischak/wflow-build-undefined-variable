@@ -5,9 +5,9 @@ This repository reproduces a strange observation with the function `wflow_build(
 ## Description
 
 If a function in a package has an undefined variable, and that variable is
-defined in the global environment, it will used that variable. In general this
-is probably a bad idea, but if the purpose of the function is to react to the
-current environment in some way, this may be desired behavior.
+defined in one of the enclosing environments, it will used that variable. In
+general this is probably a bad idea, but if the purpose of the function is to
+react to the current environment in some way, this may be desired behavior.
 
 This works when using the "Knit" button in RStudio, `rmarkdown::render_site`,
 and `rmarkdown::render`. However, `wflow_build`, which calls
