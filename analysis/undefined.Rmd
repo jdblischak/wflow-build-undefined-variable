@@ -43,9 +43,9 @@ Map(function(x) x + 1, V)
 ```
 
 Using the "Knit" button in RStudio, `rmarkdown::render_site`, and
-`rmarkdown::render`, V is passed to the function `undefined`, which references.
-However, `wflow_build`, which calls `rmarkdown::render_site` via `callr::r_safe`
-does not allow this.
+`rmarkdown::render`, V is passed to the function `undefined`, which references V
+without defining it. However, `wflow_build`, which calls
+`rmarkdown::render_site` via `callr::r_safe` does not allow this.
 
 
 ```{r try-to-use-V-in-package-function}
